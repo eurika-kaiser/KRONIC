@@ -146,8 +146,8 @@ drawnow
 set(gca,'FontSize',16)
 set(gcf,'Position',[100 100 220 200])
 set(gcf,'PaperPositionMode','auto')
-print('-painters','-depsc2', '-loose', [path2figs,ModelName_tmp,'Hamiltonian_SamplingPoints','.eps']);
-
+% print('-painters','-depsc2', '-loose', [path2figs,ModelName_tmp,'Hamiltonian_SamplingPoints','.eps']);
+print('-opengl','-depsc2', '-loose', [path2figs,ModelName_tmp,'Hamiltonian_SamplingPoints','.eps']);
 
 % Construct libraries
 Theta = buildTheta(y,nvar,polyorder,usesine);

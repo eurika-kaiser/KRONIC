@@ -1,5 +1,5 @@
 
-path2data = '../Data/'; 
+path2data = '../Data/'; ModelName1 = ['NonAutonomDoubleGyre_', 'B11_'];
 load([path2data,[ModelName1,'Data.mat']])
 path2figs = '../Figures/DOUBLE_GYRE/'; mkdir(path2figs)
 

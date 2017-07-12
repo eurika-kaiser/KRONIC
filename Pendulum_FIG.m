@@ -1,4 +1,4 @@
-path2data = '../Data/'; 
+path2data = '../Data/'; ModelName1='Pendulum_B10_';
 load([path2data,[ModelName1,'Data.mat']])
 path2figs = '../Figures/PENDULUM/'; mkdir(path2figs)
 
@@ -29,6 +29,6 @@ set(gca,'FontSize',14, 'LineWidth',1)
 set(gcf,'Position',[100 100 350 250])
 set(gcf,'PaperPositionMode','auto')
 print('-depsc2', '-loose', [path2figs,ModelName,'PhasePlot','.eps']);
-
+print('-dpng', '-loose', [path2figs,ModelName,'PhasePlot','.png']);
 
 

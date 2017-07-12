@@ -1,4 +1,4 @@
-path2data = '../Data/'; 
+path2data = '../Data/'; ModelName1 = ['HamiltonianDuffing_','B01_'];
 load([path2data,[ModelName1,'Ensemble.mat']])
 path2figs = '../Figures/HAMILTONIAN_DUFFING/'; mkdir(path2figs)
 
@@ -58,3 +58,4 @@ axis([-2.5 2.5 -2.5 2.5])
 set(gcf,'Position',[100 100 250 250])
 set(gcf,'PaperPositionMode','auto')
 print('-depsc2', '-loose', [path2figs,ModelName1,'PhasePlot','.eps']);
+print('-dpng', '-loose', [path2figs,ModelName1,'PhasePlot','.png']);

@@ -1,4 +1,4 @@
-path2data = '../Data/'; 
+path2data = '../Data/'; ModelName1 = ['AsymPotentialWell_','B11_'];
 load([path2data,[ModelName1,'Data.mat']])
 path2figs = '../Figures/ASYM_POT_WELL/'; mkdir(path2figs)
 
