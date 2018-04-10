@@ -1,7 +1,6 @@
 clear all, close all, clc
 addpath('./utils');
-path2figs = './../Figures/DUFFING/';
-mkdir(path2figs)
+path2figs = './../Figures/DUFFING/'; mkdir(path2figs)
 ModelName = 'DiscoverDuffingCVG';
 
 % Parameters
