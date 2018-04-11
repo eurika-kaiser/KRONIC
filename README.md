@@ -1,5 +1,5 @@
 # Koopman Reduced-Order Nonlinear Identification and Control (KRONIC)
-A Matlab library that implements a system identification framework for nonlinear dynamics -- referred to as Koopman Reduced-Order Nonlinear Identification and Control (KRONIC). For details see  Kaiser et. al (2017)  [[arXiv](https://arxiv.org/abs/1707.01146)].
+A Matlab library that implements a system identification framework for nonlinear dynamics -- referred to as Koopman Reduced-Order Nonlinear Identification and Control (KRONIC). For details see  **Kaiser et. al (2017)  [[arXiv](https://arxiv.org/abs/1707.01146)]**.
 
 ![](FIGURES/KRONIC.png)
 
