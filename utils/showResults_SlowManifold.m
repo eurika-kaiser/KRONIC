@@ -105,3 +105,26 @@ set(gcf,'PaperPositionMode','auto')
 print('-painters','-depsc2', '-loose', [ModelName,'Results_Legend','.eps']);
 % close(fhandle);
 
+clear ph
+fhandle = figure;
+ph(1) = plot(tspan,JLQR_phi,'-','Color',colors(1,:),'LineWidth',LineWidth);
+% ph(1) = plot(tspan,JLQR_x/10^3,'-','Color',colors(1,:),'LineWidth',LineWidth);
+hold on , grid on
+if all(xKOOC(1:dt:end,1)==0)==0
+    ph(2) = plot(tspan,JKOOC_phi,'-','Color',colors(2,:),'LineWidth',LineWidth);
+end
+ph(3) = plot(tspan,JKOOC2_phi,'--','Color',colors(3,:),'LineWidth',LineWidth);
+% ph(3) = plot(tspan,JKOOC2_x/10^3,'--','Color',colors(3,:),'LineWidth',LineWidth);
+if all(xFL(1:dt:end,1)==0)==0
+    ph(4) = plot(tspan,JFL_phi,':','Color',colors(4,:),'LineWidth',LineWidth);
+end
+ph(5) = plot(tNLC,JNLC_phi,'-.','Color',colors(5,:),'LineWidth',LineWidth);
+% ph(5) = plot(tNLC,JNLC_x/10^3,'-.','Color',colors(5,:),'LineWidth',LineWidth);
+xlabel('t'), ylabel('Jphi')
+axis(axis_lim)
+% axis([axis_lim(1),axis_lim(2),0,15])
+set(gca,'xtick',[0,20,40])
+set(gca,'FontSize',16)
+set(gcf,'Position',[100 100 225 200])
+set(gcf,'PaperPositionMode','auto')
+print('-painters','-depsc2', '-loose', [ModelName,'Results_CostPhi','.eps']);
