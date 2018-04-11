@@ -24,15 +24,19 @@ See examples in the main folder `KRONIC` for demonstrating the approach on vario
 
 ## File description
 KRONIC/
+```
+AsymmetricPotentialWell.m -- Well hopping in an asymetric potential double well
+```
 
-   -- `AsymmetricPotentialWell.m` : Well hopping in an asymetric potential double well
-   -- `AutonomDoubleGyre.m`       : Control of drifters in a double gyre flow, a simple model for ocean mixing
-   -- `NonAutonomDoubleGyre.m` 	: Similarly for the non-autonomous case
-   -- `DiscoverDuffing.m`		: Discovery of Koopman eigenfunctions/conserved quantities from data
-   -- `DiscoverDuffing_Convergence.m` : Convergence analysis (error, estimation, control) [data and computational efficiency]
-   -- `DiscoverDuffing_KRONICvsEDMDc.m` : Comparison of KRONIC with extended dynamic mode decomposition (EDMD) for control 
-   -- `SlowManifold.m` : Control of system with slow manifold (analytical example)
-   -- several other examples
+`AutonomDoubleGyre.m`       : Control of drifters in a double gyre flow, a simple model for ocean mixing
+
+`NonAutonomDoubleGyre.m` 	: Similarly for the non-autonomous case
+
+`DiscoverDuffing.m`		: Discovery of Koopman eigenfunctions/conserved quantities from data
+`DiscoverDuffing_Convergence.m` : Convergence analysis (error, estimation, control) [data and computational efficiency]
+`DiscoverDuffing_KRONICvsEDMDc.m` : Comparison of KRONIC with extended dynamic mode decomposition (EDMD) for control 
+`SlowManifold.m` : Control of system with slow manifold (analytical example)
+several other examples
 
 
 ## License ([CiteMe OSS](https://github.com/cite-me/oss))
