@@ -86,10 +86,13 @@ set(gcf,'PaperPositionMode','auto')
 print('-depsc2', '-loose', [path2figs,ModelName_tmp,'HamiltonianReconstruction','.eps']);
 
 % Plot error 
+dstep = 5;
 clear ph
 figure; hold on, box on
-ph(1) = plot(t,Gamma*xi0,'-k', 'LineWidth',2);%,'Color',[0,0,1]);
-ph(2) = plot(t,-Gamma*xi1,'-r', 'LineWidth',2);%,'Color',[0,0.5,0]);
+tmp = Gamma*xi0;
+ph(1) = plot(t(1:dstep:end),tmp(1:dstep:end),'-k', 'LineWidth',2);%,'Color',[0,0,1]);
+tmp = -Gamma*xi1;
+ph(2) = plot(t(1:dstep:end),tmp(1:dstep:end),'-r', 'LineWidth',2);%,'Color',[0,0.5,0]);
 xlabel('t'), ylabel('Gamma xi')
 xlim([min(t) max(t)])
 ylim([min(Gamma*xi1)+0.2*min(Gamma*xi1) max(Gamma*xi1)+0.5*max(Gamma*xi1)])
@@ -105,7 +108,7 @@ err1 = (Hy./norm(Hy)-(Theta)*(xi1)./norm((Theta)*(xi1)))./(Hy./norm(Hy));
 figure, plot(err0,'-r'),hold on, plot(err1,'--b')
 axis tight
 
-
+return
 %% Ensemble data
 close all
 ModelName_tmp = [ModelName, '_ensemble_'];
@@ -196,14 +199,17 @@ set(gcf,'PaperPositionMode','auto')
 print('-depsc2', '-loose', [path2figs,ModelName_tmp,'HamiltonianReconstruction','.eps']);
 
 % Plot error
+dstep = 5;
 clear ph
 figure; hold on, box on
-ph(2) = plot([1:Nx*Ny],Gamma*xi1,'-r', 'LineWidth',2);%,'Color',[0,0.5,0]);
-ph(1) = plot([1:Nx*Ny],Gamma*xi0,'-k', 'LineWidth',2);%,'Color',[0,0,1]);
-plot(t,Gamma*xi0,'-', 'LineWidth',1,'Color',[0,0,1]);
+tmp = Gamma*xi1;
+ph(2) = plot([1:dstep:Nx*Ny],tmp(1:dstep:end),'-r', 'LineWidth',2);%,'Color',[0,0.5,0]);
+tmp = Gamma*xi0;
+ph(1) = plot([1:dstep:Nx*Ny],tmp(1:dstep:end),'-k', 'LineWidth',2);%,'Color',[0,0,1]);
 xlabel('sampling point'), ylabel('Gamma xi')
-xlim([0,Nx*Ny+1])
 axis tight
+xlim([0,Nx*Ny+10])
+set(gca, 'xtick',[5000 10000],'xticklabel',{'5k', '10k'})
 set(gca,'FontSize',16)
 set(gcf,'Position',[100 100 225 200])
 set(gcf,'PaperPositionMode','auto')

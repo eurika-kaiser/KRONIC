@@ -6,7 +6,7 @@ path2figs = '../Figures/ASYM_POT_WELL/'; mkdir(path2figs)
 %% Show Potential function
 V = @(x)(x.^4/4 - x.^2/2 - (a/3).*x.^3 + a*x);
 figure,hold on, box on
-x = [-3:0.01:3]; 
+x = [-3:0.1:3]; 
 plot(x,x.^4/4 - x.^2/2 - (a/3).*x.^3 + a*x,'-k','LineWidth',3);
 xlim([-2.5 2.5]),ylim([-0.5 1])
 plot(x0(1,1),V(x0(1,1)),'o','Color',[0,0.5,1],'MarkerFaceColor',[0,0.5,1]);
@@ -19,7 +19,7 @@ xlabel('x1'), ylabel('V')
 set(gca,'ytick',[0,1])
 set(gca,'FontSize',14, 'LineWidth',1)
 set(gcf,'Position',[100 100 250 120])
-set(gcf,'PaperPositionMode','auto')
+set(gcf,'PaperPositionMode','auto'), 
 print('-painters','-depsc2', '-loose', [path2figs,ModelName1,'Potential','.eps']);
 
 
